@@ -2,29 +2,33 @@ import TypeIt from 'typeit-react';
 
 const Logo = () => {
   return (
-    <p className="p-2 text-xl font-semibold uppercase tracking-wider">
+    <span className="p-2 text-xl font-semibold uppercase tracking-wider">
       <TypeIt
         getBeforeInit={instance => {
           instance
-            .type('Aspiring')
+            .type('Portfolio')
             .pause(750)
-            .delete(8)
+            .delete(9)
             .pause(300)
-            .type('Front-End ')
+            .type('Front-End Developer')
             .pause(750)
-            .delete(10)
+            .delete(19)
             .pause(500)
             .type("Arvind's Portfolio")
             .pause(750)
             .delete(19)
             .pause(500)
-            .type('cooking Logo')
+            .type('Cooking Logo')
             .go();
+
+          setTimeout(() => {
+            instance.destroy();
+          }, 13000);
 
           return instance;
         }}
       />
-    </p>
+    </span>
   );
 };
 

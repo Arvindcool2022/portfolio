@@ -1,4 +1,4 @@
-import NavBar from './components/NavBar';
+import { NavBar, Hero } from './components';
 import './index.css';
 
 const App = () => {
@@ -9,6 +9,7 @@ const App = () => {
       </h1> */}
       <section id="home">
         <NavBar />
+        <Hero />
       </section>
       <section id="about">parallex 1</section>
       <section id="skill">service</section>

@@ -23,7 +23,7 @@ const Logo = () => {
 
           setTimeout(() => {
             instance.destroy();
-          }, 13000);
+          }, 15000);
 
           return instance;
         }}

@@ -7,6 +7,7 @@
     @apply scroll-smooth bg-[#0c0c1d] text-[lightgray];
     scroll-snap-type: y mandatory;
   }
+
   section {
     @apply h-screen snap-center;
   }

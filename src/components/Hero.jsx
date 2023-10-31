@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { btnHover, btnTap } from './buttonAnimation';
 
 const textVariant = {
   initial: {
@@ -26,11 +27,13 @@ const sliderVariant = {
   },
 
   animate: {
-    x: '-90%',
+    x: '-80%',
     transition: {
-      duration: 150,
+      type: 'tween',
+      duration: 50,
       repeat: Infinity,
-      repeatType: 'mirror'
+      repeatType: 'reverse',
+      ease: 'linear'
     }
   }
 };
@@ -57,12 +60,20 @@ const Hero = () => {
           Front-End Developer
         </motion.h2>
         <motion.div variants={textVariant} className="flex gap-5">
-          <button className="p-5 border border-white rounded-xl font-light cursor-pointer z-10">
+          <motion.button
+            whileHover={btnHover}
+            whileTap={btnTap}
+            className="relative p-5 border border-white rounded-xl cursor-pointer z-10 overflow-hidden transition-colors duration-700 ease-in-out hover:text-secondary before:content-[''] before:absolute before:w-full before:h-0 before:z-[-1] before:rounded-[0_0_50%_50%] before:top-0 before:transition-all before:duration-1000 before:left-0 before:bg-white hover:before:h-[180%]"
+          >
             See the latest work
-          </button>
-          <button className="p-5 border border-white rounded-xl font-light cursor-pointer z-10">
+          </motion.button>
+          <motion.button
+            whileHover={btnHover}
+            whileTap={btnTap}
+            className="relative p-5 border border-white rounded-xl cursor-pointer z-10 overflow-hidden transition-colors duration-700 ease-in-out hover:text-secondary before:content-[''] before:absolute before:w-full before:h-0 before:z-[-1] before:rounded-[50%_50%_0_0] before:bottom-0 before:transition-all before:duration-1000 before:left-0 before:bg-white hover:before:h-[180%]"
+          >
             Contact me
-          </button>
+          </motion.button>
         </motion.div>
         <motion.img
           variants={textVariant}
@@ -76,10 +87,11 @@ const Hero = () => {
         variants={sliderVariant}
         initial="initial"
         animate="animate"
-        className="absolute -bottom-28 whitespace-nowrap text-[50vh] opacity-5"
+        className="absolute -bottom-28 whitespace-nowrap text-[50vh] opacity-5 will-change-transform"
       >
-        UI Designer React Developer CSS Fanatic Front-End Aficionado JavaScript
-        Enthusiast
+        React Developer JavaScript Enthusiast
+        {/* Front-End Aficionado CSS Fanatic
+        UI Designer */}
       </motion.p>
       <div className="h-full absolute right-0 top-0">
         <img src="/dev2.png" className="h-full" alt="hero img" />

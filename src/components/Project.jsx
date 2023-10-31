@@ -1,15 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-
-const btnHover = {
-  scale: 1.1,
-  transition: { type: 'spring', stiffness: 250, damping: 30 }
-};
-
-const btnTap = {
-  scale: 0.9,
-  transition: { type: 'spring', stiffness: 500, damping: 30 }
-};
+import { btnHover, btnTap } from './buttonAnimation';
 
 const Project = ({ item }) => {
   const ref = useRef();
@@ -36,14 +27,14 @@ const Project = ({ item }) => {
           <motion.a
             whileHover={btnHover}
             whileTap={btnTap}
-            className="p-2 text-xs border border-white rounded-lg font-light cursor-pointer capitalize z-10"
+            className="relative p-2 text-xs border border-white rounded-lg cursor-pointer capitalize z-10 overflow-hidden transition-colors duration-700 ease-in-out hover:text-secondary before:content-[''] before:absolute before:w-full before:h-0 before:z-[-1] before:rounded-[0_0_50%_50%] before:top-0 before:transition-all before:duration-1000 before:left-0 before:bg-white hover:before:h-[180%]"
           >
             source code
           </motion.a>
           <motion.a
             whileHover={btnHover}
             whileTap={btnTap}
-            className="p-2 text-xs border border-white rounded-lg font-light cursor-pointer capitalize z-10"
+            className="relative p-2 text-xs border border-white rounded-lg cursor-pointer capitalize z-10 overflow-hidden transition-colors duration-700 ease-in-out hover:text-secondary before:content-[''] before:absolute before:w-full before:h-0 before:z-[-1] before:rounded-[50%_50%_0_0] before:bottom-0 before:transition-all before:duration-1000 before:left-0 before:bg-white hover:before:h-[180%]"
           >
             live demo
           </motion.a>

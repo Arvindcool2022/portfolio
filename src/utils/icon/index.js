@@ -14,6 +14,11 @@ import IconSass from './IconSass';
 import IconTailwindcss from './IconTailwindcss';
 import IconVite from './IconVite';
 
+import IconGithub from './IconGithub';
+import IconInstagram from './IconInstagram';
+import IconLinkedin from './IconLinkedin';
+import IconWhatsapp from './IconWhatsapp';
+
 export {
   IconApi,
   IconBootstrap,
@@ -29,5 +34,9 @@ export {
   IconRedux,
   IconSass,
   IconTailwindcss,
-  IconVite
+  IconVite,
+  IconGithub,
+  IconInstagram,
+  IconLinkedin,
+  IconWhatsapp
 };

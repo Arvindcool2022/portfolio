@@ -7,10 +7,16 @@ export default {
         DMsans: "'DM sans',san-serif"
       },
       backgroundColor: {
-        primary: '#0c0c1d'
+        primary: '#0c0c1d',
+        secondary: 'lightgray'
       },
       textColor: {
-        primary: 'lightgray'
+        primary: 'lightgray',
+        secondary: '#0c0c1d'
+      },
+      borderColor: {
+        primary: '#0c0c1d',
+        secondary: 'lightgray'
       },
       animation: {
         progress: 'progress 3s ease-in-out forwards'

@@ -1,10 +1,10 @@
-import bite from '../../public/bite.jpeg';
-import youtube from '../../public/youtube.jpeg';
-import haircare from '../../public/haircare.jpeg';
-import misc from '../../public/misc.jpeg';
-import portfolio from '../../public/portfolio.jpeg';
-import moshify from '../../public/mosify.jpeg';
-import athletaro from '../../public/athletaro.jpeg';
+import bite from '../assets/bite.jpeg';
+import youtube from '../assets/youtube.jpeg';
+import haircare from '../assets/haircare.jpeg';
+import misc from '../assets/misc.jpeg';
+import portfolio from '../assets/portfolio.jpeg';
+import moshify from '../assets/mosify.jpeg';
+import athletaro from '../assets/athletaro.jpeg';
 
 import {
   IconApi,
@@ -22,7 +22,7 @@ import {
   IconSass,
   IconTailwindcss,
   IconVite
-} from './icon/index';
+} from './icon';
 
 const projects = [
   {
@@ -83,7 +83,6 @@ const projects = [
   },
   {
     id: 4,
-    tagLine: '',
     name: 'Haircare',
     tagLine: 'Elegance Meets Style',
     description:

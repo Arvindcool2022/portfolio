@@ -36,11 +36,11 @@ const Parallex = ({ type }) => {
       <motion.div
         style={{
           x: sunMotion,
-          backgroundImage: `url(${condition ? '/planets.png' : '/sun.png'})`
+          backgroundImage: `url(${condition ? './planets.png' : './sun.png'})`
         }}
         className="w-full h-full bg-cover bg-bottom absolute"
       ></motion.div>
-      <motion.div className="bg-[url('\mountains.png')] w-full h-full bg-cover bg-bottom absolute"></motion.div>
+      <motion.div className="bg-[url('mountains.png')] w-full h-full bg-cover bg-bottom absolute"></motion.div>
     </div>
   );
 };

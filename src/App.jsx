@@ -1,5 +1,5 @@
 import { NavBar, Hero, Parallex, SkillsBar, Portfolio } from './components';
-import './index.css';
+import './assets/index.css';
 
 const App = () => {
   return (

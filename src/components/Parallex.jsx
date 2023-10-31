@@ -30,8 +30,8 @@ const Parallex = ({ type }) => {
         {condition ? 'Skills Spectrum' : 'Project Portfolio'}
       </motion.h1>
       <motion.div
-        className="bg-[url('stars.png')] w-full h-full bg-cover bg-bottom absolute "
-        style={{ x: starMotion }}
+        className="w-full h-full bg-cover bg-bottom absolute "
+        style={{ x: starMotion, backgroundImage: './stars.png' }}
       ></motion.div>
       <motion.div
         style={{
@@ -40,7 +40,10 @@ const Parallex = ({ type }) => {
         }}
         className="w-full h-full bg-cover bg-bottom absolute"
       ></motion.div>
-      <motion.div className="bg-[url('mountains.png')] w-full h-full bg-cover bg-bottom absolute"></motion.div>
+      <motion.div
+        style={{ backgroundImage: './mountains.png' }}
+        className="w-full h-full bg-cover bg-bottom absolute"
+      ></motion.div>
     </div>
   );
 };

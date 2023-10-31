@@ -8,14 +8,14 @@ const variants = {
     clipPath: 'circle(1400px at 50px 50px)',
     transition: {
       type: 'spring',
-      stiffness: 200
+      stiffness: 100
     }
   },
   closed: {
     clipPath: 'circle(30px at 50px 50px)',
     transition: {
       type: 'spring',
-      stiffness: 400,
+      stiffness: 150,
       damping: 40
     }
   }

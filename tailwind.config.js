@@ -6,13 +6,14 @@ export default {
       fontFamily: {
         DMsans: "'DM sans',san-serif"
       },
+      backgroundColor: {
+        primary: '#0c0c1d'
+      },
+      textColor: {
+        primary: 'lightgray'
+      },
       animation: {
-        progress: 'progress 3s ease-in-out forwards',
-        progressOne: 'progress 3s ease-in-out 100ms forwards',
-        progressTwo: 'progress 3s ease-in-out 200ms forwards',
-        progressThree: 'progress 3s ease-in-out 300ms forwards',
-        progressFour: 'progress 3s ease-in-out 400ms forwards'
-        // Add more custom animations here if needed
+        progress: 'progress 3s ease-in-out forwards'
       },
       keyframes: {
         progress: {

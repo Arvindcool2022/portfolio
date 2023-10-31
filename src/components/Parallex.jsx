@@ -30,7 +30,7 @@ const Parallex = ({ type }) => {
         {condition ? 'Skills Spectrum' : 'Project Portfolio'}
       </motion.h1>
       <motion.div
-        className="bg-[url('stars.png')] w-full h-full bg-cover bg-bottom absolute"
+        className="bg-[url('stars.png')] w-full h-full bg-cover bg-bottom absolute "
         style={{ x: starMotion }}
       ></motion.div>
       <motion.div

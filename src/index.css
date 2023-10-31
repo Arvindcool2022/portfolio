@@ -4,7 +4,7 @@
 
 @layer base {
   html {
-    @apply scroll-smooth bg-[#0c0c1d] text-[lightgray];
+    @apply scroll-smooth bg-primary text-primary;
     scroll-snap-type: y mandatory;
   }
 

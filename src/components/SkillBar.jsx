@@ -1,65 +1,64 @@
-import React from 'react';
-import Skill from './Skill'; // Import the Skill component
+import { useEffect, useRef } from 'react';
+import Skill from './Skill';
+import { animate, motion, useAnimation, useInView } from 'framer-motion';
 
+const variants = {
+  initial: {
+    y: 500,
+    opacity: 0
+  },
+
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.03
+    }
+  }
+};
 function SkillsBar() {
+  const ref = useRef(null);
+  const visible = useInView(ref, { once: true });
+  const control = useAnimation();
+
+  useEffect(() => {
+    console.log(visible);
+    if (visible) control.start('animate');
+  }, [visible]);
+
   return (
     <article className="h-screen flex justify-center items-center text-white">
-      <div className="relative w-full md:w-4/5 bg-white bg-opacity-5 mx-auto py-2 px-5 rounded-md">
+      <motion.div
+        ref={ref}
+        initial="initial"
+        animate={control}
+        variants={variants}
+        className="relative w-full md:w-4/5 bg-white bg-opacity-5 mx-auto py-2 px-5 rounded-md"
+      >
         <h1 className="text-center font-medium text-xl mt-4 mb-7 uppercase">
           Skills
         </h1>
 
-        <Skill name="HTML" width="[95%]" percentage="95" animationDelay="" />
-        <Skill name="CSS" width="4/5" percentage="80" animationDelay="One" />
-        <Skill
-          name="JavaScript"
-          width="4/5"
-          percentage="80"
-          animationDelay="One"
-        />
-        <Skill
-          name="React"
-          width="9/12"
-          percentage="75"
-          animationDelay="Three"
-        />
-        <Skill
-          name="SASS"
-          width="9/12"
-          percentage="75"
-          animationDelay="Three"
-        />
-        <Skill
-          name="git/Github"
-          width="3/5"
-          percentage="60"
-          animationDelay="Three"
-        />
-        <Skill
-          name="Bootstrap"
-          width="9/12"
-          percentage="75"
-          animationDelay="Three"
-        />
-        <Skill
-          name="Tailwind"
-          width="9/12"
-          percentage="75"
-          animationDelay="Three"
-        />
+        <Skill name="HTML" percentage="95" primaryAnimation={variants} />
+        <Skill name="CSS" percentage="80" primaryAnimation={variants} />
+        <Skill name="JavaScript" percentage="80" primaryAnimation={variants} />
+        <Skill name="React" percentage="75" primaryAnimation={variants} />
+        <Skill name="SASS" percentage="75" primaryAnimation={variants} />
+        <Skill name="git/Github" percentage="60" primaryAnimation={variants} />
+        <Skill name="Bootstrap" percentage="75" primaryAnimation={variants} />
+        <Skill name="Tailwind" percentage="75" primaryAnimation={variants} />
         <Skill
           name="Redux toolkit"
-          width="3/5"
           percentage="60"
-          animationDelay="Four"
+          primaryAnimation={variants}
         />
         <Skill
           name="Framer motion"
-          width="2/5"
           percentage="40"
-          animationDelay="Four"
+          primaryAnimation={variants}
         />
-      </div>
+      </motion.div>
     </article>
   );
 }

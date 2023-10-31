@@ -31,7 +31,7 @@ const Parallex = ({ type }) => {
       </motion.h1>
       <motion.div
         className="w-full h-full bg-cover bg-bottom absolute "
-        style={{ x: starMotion, backgroundImage: './stars.png' }}
+        style={{ x: starMotion, backgroundImage: `url('./stars.png')` }}
       ></motion.div>
       <motion.div
         style={{
@@ -41,7 +41,7 @@ const Parallex = ({ type }) => {
         className="w-full h-full bg-cover bg-bottom absolute"
       ></motion.div>
       <motion.div
-        style={{ backgroundImage: './mountains.png' }}
+        style={{ backgroundImage: `url('./mountains.png')` }}
         className="w-full h-full bg-cover bg-bottom absolute"
       ></motion.div>
     </div>

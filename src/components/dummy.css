@@ -1,0 +1,69 @@
+.skill-box {
+  @apply w-full mx-0 my-[25px];
+}
+.skill-box .title {
+  @apply block text-sm font-semibold text-white;
+}
+.skill-box .skill-bar {
+  @apply h-2 w-full mt-1.5 rounded-md;
+  background: #0c0c1d;
+}
+.skill-box .skill-per {
+  @apply relative block h-full w-[95%] animate-[progress_3s_ease-in-out_forwards] opacity-0 rounded-md;
+  background: #9e3ef2;
+}
+.skill-per.css {
+  @apply w-4/5;
+  animation-delay: 0.1s;
+}
+.skill-per.javascript {
+  @apply w-4/5;
+  animation-delay: 0.2s;
+}
+.skill-per.react {
+  @apply w-9/12;
+  animation-delay: 0.3s;
+}
+.skill-per.sass {
+  @apply w-9/12;
+  animation-delay: 0.3s;
+}
+.skill-per.git {
+  @apply w-3/5;
+  animation-delay: 0.3s;
+}
+.skill-per.boot {
+  @apply w-9/12;
+  animation-delay: 0.3s;
+}
+.skill-per.tail {
+  @apply w-9/12;
+  animation-delay: 0.3s;
+}
+.skill-per.redux {
+  @apply w-3/5;
+  animation-delay: 0.4s;
+}
+.skill-per.fm {
+  @apply w-2/5;
+  animation-delay: 0.4s;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .tooltip {
+  @apply absolute text-[9px] font-medium text-white z-[1] px-1.5 py-0.5 rounded-[3px] -right-3.5 -top-7;
+  background: #9e3ef2;
+}
+.tooltip::before {
+  @apply content-[''] absolute h-2.5 w-2.5 z-[-1] bg-[#9e3ef2] -translate-x-2/4 rotate-45 left-2/4 -bottom-0.5;
+} */

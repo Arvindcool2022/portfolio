@@ -22,7 +22,6 @@ const textVariant = {
 };
 const sliderVariant = {
   initial: {
-    // x: '-40%'
     x: '0%'
   },
 
@@ -90,42 +89,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-// const [scrollDirection, setScrollDirection] = useState('down');
-// const controls = useAnimation();
-
-// useEffect(() => {
-//   controls.start('animate');
-// }, []);
-
-// useEffect(() => {
-//   const handleScroll = () => {
-//     const scrollY = window.scrollY;
-
-//     if (scrollY > 0) {
-//       if (scrollDirection === 'down') {
-//         controls.start('reverse'); // Start the slider animation in the reverse direction
-//         setScrollDirection('up');
-//       }
-//     } else {
-//       if (scrollDirection === 'up') {
-//         controls.start('animate'); // Start the slider animation in the original direction
-//         setScrollDirection('down');
-//       }
-//     }
-//   };
-
-//   window.addEventListener('scroll', handleScroll);
-
-//   return () => {
-//     window.removeEventListener('scroll', handleScroll);
-//   };
-// }, [scrollDirection, controls]);
-// reverse: {
-//   x: '-0%',
-//   transition: {
-//     duration: 45,
-//     repeat: Infinity,
-//     repeatType: 'loop'
-//   }
-// },

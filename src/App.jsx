@@ -1,12 +1,9 @@
-import { NavBar, Hero, Parallex } from './components';
+import { NavBar, Hero, Parallex, SkillsBar } from './components';
 import './index.css';
 
 const App = () => {
   return (
     <main>
-      {/* <h1 className="text-3xl font-bold text-red-700 text-center bg-black font-DMsans capitalize py-1">
-        peek-a-boo 😆
-      </h1> */}
       <section id="home">
         <NavBar />
         <Hero />
@@ -14,7 +11,9 @@ const App = () => {
       <section id="about">
         <Parallex type={'skills'} />
       </section>
-      <section id="skill">Skills</section>
+      <section id="skill">
+        <SkillsBar />
+      </section>
       <section>
         <Parallex type={'projects'} />
       </section>

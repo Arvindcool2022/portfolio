@@ -1,4 +1,4 @@
-import { NavBar, Hero, Parallex, SkillsBar } from './components';
+import { NavBar, Hero, Parallex, SkillsBar, Portfolio } from './components';
 import './index.css';
 
 const App = () => {
@@ -8,18 +8,17 @@ const App = () => {
         <NavBar />
         <Hero />
       </section>
-      <section id="about">
+      <section id="skill">
         <Parallex type={'skills'} />
       </section>
-      <section id="skill">
+      <section>
         <SkillsBar />
       </section>
-      <section>
+      <section id="projects">
         <Parallex type={'projects'} />
       </section>
-      <section id="projects">project 1</section>
-      <section>project 2</section>
-      <section>project 3</section>
+      <Portfolio />
+
       <section id="contact-us">contact us</section>
     </main>
   );

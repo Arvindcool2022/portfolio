@@ -7,12 +7,12 @@ function Skill({ name, percentage, primaryAnimation }) {
   const control = useAnimation();
   const progress = {
     initial: {
-      width: '0',
-      opacity: '0'
+      width: 0,
+      opacity: 0.3
     },
     animate: {
       width: `${percentage}%`,
-      opacity: '1',
+      opacity: 1,
       transition: {
         delay: 0.15,
         duration: 3
@@ -21,7 +21,6 @@ function Skill({ name, percentage, primaryAnimation }) {
   };
 
   useEffect(() => {
-    console.log(visible);
     if (visible) control.start('animate');
   }, [visible]);
   return (

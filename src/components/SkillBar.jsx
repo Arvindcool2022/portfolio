@@ -23,7 +23,6 @@ function SkillsBar() {
   const control = useAnimation();
 
   useEffect(() => {
-    console.log(visible);
     if (visible) control.start('animate');
   }, [visible]);
 

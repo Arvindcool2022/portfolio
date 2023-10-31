@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 const btnHover = {
   scale: 1.1,
@@ -11,13 +12,20 @@ const btnTap = {
 };
 
 const Project = ({ item }) => {
-  console.log(item);
+  const ref = useRef();
+
+  const { scrollYProgress } = useScroll({
+    target: ref
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+
   return (
     <section className="flex items-center justify-center max-w-6xl mx-auto gap-4">
       <div className="flex-1 overflow-hidden">
-        <img className="cover w-full h-full" src={item.img} />
+        <img ref={ref} className="cover w-full h-full" src={item.img} />
       </div>
-      <div className="flex-1">
+      <motion.div className="flex-1" style={{ y }}>
         <h2 className="capitalize text-4xl font-bold text-white">
           {item.name}
         </h2>
@@ -40,7 +48,7 @@ const Project = ({ item }) => {
             live demo
           </motion.a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

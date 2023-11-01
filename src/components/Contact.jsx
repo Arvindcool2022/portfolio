@@ -60,7 +60,7 @@ const Contact = () => {
     >
       <motion.div
         variants={variants}
-        className="h-[95%] md:h-[90%] mx-auto max-w-6xl flex items-center justify-center gap-10 xl:m-4 sm:flex-col sm:gap-0"
+        className="h-[95%] md:h-[90%] mx-auto max-w-6xl flex items-center justify-center gap-10 xl:mx-4 sm:flex-col sm:gap-0"
       >
         <motion.div className="flex-1 md:mt-8" variants={variants}>
           <motion.h1
@@ -79,7 +79,7 @@ const Contact = () => {
             </li>
             <motion.li variants={variants}>
               <a
-                className="relative font-medium overflow-hidden rounded p-1 transition-all duration-500 ease-in-out hover:text-secondary before:content-[''] before:absolute before:-z-10 before:left-0 before:top-0 before:bg-white before:h-full before:transition-all before:duration-500 before:ease-in-out before:w-full before:scale-x-0 before:origin-left hover:before:scale-x-100"
+                className="relative font-medium overflow-hidden rounded p-1 text-amber-500 transition-all duration-500 ease-in-out hover:text-secondary before:content-[''] before:absolute before:-z-10 before:left-0 before:top-0 before:bg-white before:h-full before:transition-all before:duration-500 before:ease-in-out before:w-full before:scale-x-0 before:origin-left hover:before:scale-x-100"
                 href="https://www.linkedin.com/in/arvind-a-262260227/"
                 target="_blank"
               >
@@ -177,7 +177,7 @@ const Contact = () => {
         © 2023 Arvind. made with ❤️. All Rights NOT Reserved. Feel Free To
         Copy😜. Source code in{' '}
         <a
-          className="underline underline-offset-2 relative font-medium overflow-hidden transition-all duration-500 ease-in-out hover:text-secondary before:content-[''] before:absolute before:-z-10 before:left-0 before:top-0 before:bg-white before:h-full before:transition-all before:duration-500 before:ease-in-out before:w-full before:scale-x-0 before:origin-left hover:before:scale-x-100"
+          className="underline underline-offset-2 relative font-medium overflow-hidden text-amber-500 transition-all duration-500 ease-in-out hover:text-secondary before:content-[''] before:absolute before:-z-10 before:left-0 before:top-0 before:bg-white before:h-full before:transition-all before:duration-500 before:ease-in-out before:w-full before:scale-x-0 before:origin-left hover:before:scale-x-100"
           href="https://github.com/Arvindcool2022/portfolio"
           target="_blank"
         >

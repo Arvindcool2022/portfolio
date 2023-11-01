@@ -7,13 +7,13 @@ import {
 
 const Socials = () => (
   <>
-    <a href="#">
+    <a href="https://github.com/Arvindcool2022" target="_blank">
       <IconGithub height={'1.5rem'} width={'1.5rem'} />
     </a>
-    <a href="#">
+    <a href="https://www.linkedin.com/in/arvind-a-262260227/" target="_blank">
       <IconLinkedin height={'1.5rem'} width={'1.5rem'} />
     </a>
-    <a href="#">
+    <a href="https://wa.me/918778891211" target="_blank">
       <IconWhatsapp height={'1.5rem'} width={'1.5rem'} />
     </a>
     <a href="#">

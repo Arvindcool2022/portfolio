@@ -41,8 +41,8 @@ const projects = [
       <IconApi />,
       <IconCreatereactapp />
     ],
-    code: 'github',
-    demo: 'link'
+    code: 'https://github.com/Arvindcool2022/Youtube',
+    demo: 'https://youtube-arvind.netlify.app/'
     // react,redux.react-router,react-player,tailwind css, rapid API,create-react-app
   },
   {
@@ -60,8 +60,8 @@ const projects = [
       <IconApi />,
       <IconParcel />
     ],
-    code: 'github',
-    demo: 'link'
+    code: 'https://github.com/Arvindcool2022/Learn-React.js',
+    demo: 'https://bitedash.netlify.app/'
     // react,redux.react-router,tailwind css, Swiggy API,parcel
   },
   {
@@ -77,8 +77,8 @@ const projects = [
       <IconFramer />,
       <IconVite />
     ],
-    code: 'github',
-    demo: false
+    code: 'https://github.com/Arvindcool2022/portfolio',
+    demo: 'https://arvinds-portfolio.netlify.app'
     // react,tailwind css, framer-motion,vite
   },
   {
@@ -89,8 +89,8 @@ const projects = [
       "Step into the world of Haircare, an enchanting landing page concept for a premium salon experience. While this page is a design showcase and not functional, it boasts an exquisite gallery section to flaunt salon offerings. Explore the seamless design, showcasing the perfect blend of HTML5, Sass, and Bootstrap. Immerse yourself in the captivating visuals of a modern salon, featuring a beautiful gallery, an inviting contact form, and a captivating testimonial carousel. Experience the essence of sophistication and style, meticulously crafted to reflect the salon's commitment to elegance.",
     img: haircare,
     technology: [<IconHtml5 />, , <IconBootstrap />, <IconSass />],
-    code: 'github',
-    demo: 'link'
+    code: 'https://github.com/Arvindcool2022/themewagon-Haircare-clone',
+    demo: 'https://haircaretheme.netlify.app/'
     //HTML, Sass, bootStrap
   },
   {
@@ -101,8 +101,8 @@ const projects = [
       "Discover Athletaro, an e-commerce-inspired design that brings together the best of sports and style. While not functional, it showcases an enticing shoe shop section, perfectly suited for the sneaker enthusiast. The design marries HTML5, JavaScript, and Bootstrap to deliver an engaging user experience. Immerse yourself in a parallax hero page that sets the tone for a dynamic shopping journey. Explore the seamless modal sign-in for personalized shopping and browse through a shoe collection that's all about comfort and style. Athletaro is where sports and fashion collide in a visually striking, non-functional design. Keep an eye out for the hidden Easter egg cleverly incorporated into the logo, adding a touch of mystery to your visit.",
     img: athletaro,
     technology: [<IconHtml5 />, <IconBootstrap />, <IconJavascript />],
-    code: 'github',
-    demo: 'link'
+    code: 'https://github.com/Arvindcool2022/Sample-Ecommerce-bootstrap',
+    demo: 'https://athletaro.netlify.app'
     //HTML,js, bootStrap
   },
   {
@@ -113,8 +113,8 @@ const projects = [
       "Welcome to 'Misc,' a versatile collection of playful JavaScript projects. This compilation showcases the unlimited possibilities of HTML, CSS, and JavaScript. Dive into a myriad of small applications, from a functional calculator and dynamic carousels to a to-do list manager and engaging quiz app. Explore JavaScript's capabilities in data manipulation and processing through JSON data management. You'll find useful tools like a money exchange calculator and captivating text effects that add a touch of fun to the world of web development. 'Misc' serves as an imaginative playground, where innovation knows no bounds. It's a testament to the endless creativity that HTML, CSS, and JavaScript bring to the digital realm.",
     img: misc,
     technology: [<IconHtml5 />, <IconCss3 />, <IconJavascript />, <IconApi />],
-    code: 'github',
-    demo: 'link'
+    code: 'https://github.com/Arvindcool2022/Js-Mini-Projects',
+    demo: 'https://arvind-jsminiprojects.netlify.app'
     //HTML,CSS,JS
   },
   {
@@ -125,8 +125,8 @@ const projects = [
       "Moshify is a visually captivating web project, meticulously crafted with HTML, CSS, and JavaScript. This responsive site, built for my portfolio, showcases professional design and optimal performance. Careful image optimization ensures a seamless experience across various devices. The hero page immediately grabs attention, while elegant pricing cards engage users. Dynamic elements and compelling calls to action enhance interactivity. The testimonial section adds credibility to this professional-looking site. Moshify is a testament to my web design skills, offering stunning, responsive web pages that captivate users whether they're on desktop or mobile devices. It's a showcase of design expertise and an assurance of an engaging, visually pleasing experience.",
     img: moshify,
     technology: [<IconHtml5 />, <IconCss3 />, <IconJavascript />],
-    code: 'github',
-    demo: 'link'
+    code: 'https://github.com/Arvindcool2022/first-full-page-website-moshify',
+    demo: 'https://arvind-moshify.netlify.app'
     //HTML,CSS,JS
   }
 ];

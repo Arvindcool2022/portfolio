@@ -34,6 +34,8 @@ const Project = ({ item }) => {
         <p className="text-sm">{item.description}</p>
         <div className="flex gap-5 mt-4 md:justify-center">
           <motion.a
+            href={item.code}
+            target="_blank"
             whileHover={btnHover}
             whileTap={btnTap}
             className="relative p-2 text-xs border border-white rounded-lg cursor-pointer capitalize z-10 overflow-hidden transition-colors duration-700 ease-in-out hover:text-secondary before:content-[''] before:absolute before:w-full before:h-0 before:z-[-1] before:rounded-[0_0_50%_50%] before:top-0 before:transition-all before:duration-1000 before:left-0 before:bg-white hover:before:h-[180%]"
@@ -41,6 +43,8 @@ const Project = ({ item }) => {
             source code
           </motion.a>
           <motion.a
+            href={item.demo}
+            target="_blank"
             whileHover={btnHover}
             whileTap={btnTap}
             className="relative p-2 text-xs border border-white rounded-lg cursor-pointer capitalize z-10 overflow-hidden transition-colors duration-700 ease-in-out hover:text-secondary before:content-[''] before:absolute before:w-full before:h-0 before:z-[-1] before:rounded-[50%_50%_0_0] before:bottom-0 before:transition-all before:duration-1000 before:left-0 before:bg-white hover:before:h-[180%]"

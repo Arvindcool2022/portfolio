@@ -5,10 +5,19 @@
 @layer base {
   html {
     @apply scroll-smooth bg-primary text-primary select-none;
-    scroll-snap-type: y mandatory;
   }
 
   section {
-    @apply h-screen snap-center;
+    @apply h-screen;
+  }
+
+  @media screen and (min-width: 639px) {
+    html {
+      scroll-snap-type: y mandatory;
+    }
+
+    section {
+      @apply snap-center;
+    }
   }
 }

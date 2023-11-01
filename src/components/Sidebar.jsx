@@ -32,7 +32,7 @@ const Sidebar = () => {
         className="fixed top-0 left-0 bottom-0 w-96 z-40 bg-white"
         variants={variants}
       >
-        <List />
+        <List setOpen={setOpen} />
       </motion.div>
       <ToggleButton setOpen={setOpen} />
     </motion.div>

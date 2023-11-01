@@ -18,7 +18,7 @@ const itemVariants = {
   closed: { y: -50, opacity: 0 }
 };
 
-const List = () => {
+const List = ({ setOpen }) => {
   const pages = ['home', 'about', 'skill', 'projects', 'contact-us'];
   return (
     <motion.div
@@ -33,6 +33,7 @@ const List = () => {
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
+          onClick={() => setOpen(p => !p)}
         >
           {page}
         </motion.a>

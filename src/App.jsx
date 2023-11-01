@@ -4,13 +4,15 @@ import {
   Parallex,
   SkillsBar,
   Portfolio,
-  Contact
+  Contact,
+  Cursor
 } from './components';
 import './assets/index.css';
 
 const App = () => {
   return (
     <main>
+      <Cursor />
       <section id="home">
         <NavBar />
         <Hero />

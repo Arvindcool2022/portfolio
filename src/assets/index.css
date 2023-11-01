@@ -5,19 +5,16 @@
 @layer base {
   html {
     @apply scroll-smooth bg-primary text-primary select-none;
+    scroll-snap-type: y proximity;
   }
 
   section {
-    @apply h-screen;
+    @apply h-screen snap-center;
   }
 
-  @media screen and (min-width: 639px) {
+  @media screen and (max-width: 639px) {
     html {
       scroll-snap-type: y mandatory;
-    }
-
-    section {
-      @apply snap-center;
     }
   }
 }

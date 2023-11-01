@@ -2,6 +2,14 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    screens: {
+      '2xl': { max: '1254px' }, // => @media (max-width: 1254px) { ... }
+      xl: { max: '1140px' },
+      lg: { max: '1023px' },
+      md: { max: '767px' },
+      sm: { max: '639px' },
+      xs: { max: '475px' }
+    },
     extend: {
       fontFamily: {
         DMsans: "'DM sans',san-serif"

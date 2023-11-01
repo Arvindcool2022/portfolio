@@ -24,7 +24,7 @@ const Parallex = ({ type }) => {
       }`}
     >
       <motion.h1
-        className="font-bold text-8xl text-center"
+        className="font-bold text-8xl text-center xs:text-6xl"
         style={{ y: textMotion }}
       >
         {condition ? 'Skills Spectrum' : 'Project Portfolio'}

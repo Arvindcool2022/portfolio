@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Socials from '../Socials';
 
 const variants = {
   open: {
@@ -38,6 +39,12 @@ const List = ({ setOpen }) => {
           {page}
         </motion.a>
       ))}
+      <motion.div
+        variants={itemVariants}
+        className="sm:flex justify-between w-1/2 mt-4 hidden"
+      >
+        <Socials />
+      </motion.div>
     </motion.div>
   );
 };

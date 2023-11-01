@@ -60,10 +60,13 @@ const Contact = () => {
     >
       <motion.div
         variants={variants}
-        className="h-[95%] mx-auto max-w-6xl flex items-center justify-center gap-10"
+        className="h-[95%] md:h-[90%] mx-auto max-w-6xl flex items-center justify-center gap-10 xl:m-4 sm:flex-col sm:gap-0"
       >
-        <motion.div className="flex-1" variants={variants}>
-          <motion.h1 className="font-bold text-7xl" variants={variants}>
+        <motion.div className="flex-1 md:mt-8" variants={variants}>
+          <motion.h1
+            className="font-bold text-7xl sm:text-3xl"
+            variants={variants}
+          >
             Let's work together
           </motion.h1>
           <motion.ul variants={variants} className="ps-4">
@@ -89,14 +92,14 @@ const Contact = () => {
             <motion.li variants={variants}>chennai.</motion.li>
           </motion.ul>
         </motion.div>
-        <div className="flex-1 relative">
+        <div className="flex-1 relative md:w-full">
           <motion.div
             className="w-full h-full absolute bg-primary -z-10 stroke-purple-700"
             initial={{ opacity: 1 }}
             whileInView={{ opacity: 0 }}
             transition={{ delay: 3, duration: 1 }}
           >
-            <svg width="450px" height="450px" viewBox="0 0 32.666 32.666">
+            <svg viewBox="0 0 32.666 32.666">
               <motion.path
                 strokeWidth={0.2}
                 fill="none"
@@ -121,7 +124,7 @@ const Contact = () => {
           </motion.div>
           <motion.form
             ref={formRef}
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-6 sm:gap-2"
             onSubmit={sendEmail}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, zIndex: 2 }}
@@ -151,7 +154,7 @@ const Contact = () => {
             <motion.button
               whileHover={btnHover}
               whileTap={btnTap}
-              className="text-lg font-medium w-1/3 self-center relative p-4 border border-white rounded-xl cursor-pointer overflow-hidden transition-colors duration-700 ease-in-out hover:text-secondary before:content-[''] before:absolute before:w-full before:h-0 before:z-[-1] before:rounded-[0_0_50%_50%] before:-top-1 before:transition-all before:duration-1000 before:left-0 before:bg-white hover:before:h-[180%]"
+              className="text-lg font-medium w-1/3 sm:w-1/2 self-center relative p-4 sm:p-2 border border-white rounded-xl cursor-pointer overflow-hidden transition-colors duration-700 ease-in-out hover:text-secondary before:content-[''] before:absolute before:w-full before:h-0 before:z-[-1] before:rounded-[0_0_50%_50%] before:-top-1 before:transition-all before:duration-1000 before:left-0 before:bg-white hover:before:h-[180%]"
             >
               Submit
             </motion.button>
@@ -169,20 +172,19 @@ const Contact = () => {
       </motion.div>
       <motion.p
         variants={variants}
-        className="text-sm text-center capitalize text-slate-500 flex gap-1 justify-center items-end"
+        className="text-sm text-center capitalize text-slate-500 flex gap-1 md:block justify-center items-end"
       >
-        © 2023 Arvind. made with ❤️. All Rights{' '}
-        <span className="text-sm">NOT</span> Reserved. Feel Free To Copy 😜.
-        Source code in{' '}
+        © 2023 Arvind. made with ❤️. All Rights NOT Reserved. Feel Free To
+        Copy😜. Source code in{' '}
         <a
           className="underline underline-offset-2 relative font-medium overflow-hidden transition-all duration-500 ease-in-out hover:text-secondary before:content-[''] before:absolute before:-z-10 before:left-0 before:top-0 before:bg-white before:h-full before:transition-all before:duration-500 before:ease-in-out before:w-full before:scale-x-0 before:origin-left hover:before:scale-x-100"
           href="https://github.com/Arvindcool2022/portfolio"
           target="_blank"
         >
-          GitHub
+          GitHub.
         </a>
-        . created using
-        <span className="flex items-center gap-1">
+        <span className="flex items-center md:justify-center gap-1">
+          created using
           <IconReact />
           <IconTailwindcss />
           <IconFramer />

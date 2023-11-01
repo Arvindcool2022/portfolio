@@ -12,18 +12,27 @@ const Project = ({ item }) => {
   const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
   return (
-    <section className="flex items-center justify-center max-w-6xl mx-auto gap-4">
-      <div className="flex-1 overflow-hidden">
-        <img ref={ref} className="cover w-full h-full" src={item.img} />
+    <section className="flex md:flex-col items-center justify-center max-w-6xl mx-auto gap-4">
+      <div className="flex-1 overflow-hidden md:max-h-72 md:w-full md:mt-4">
+        <img
+          ref={ref}
+          className="w-full h-full md:object-contain"
+          src={item.img}
+        />
       </div>
-      <motion.div className="flex-1" style={{ y }}>
-        <h2 className="capitalize text-4xl font-bold text-white">
+      <motion.div
+        className="flex-1 md:text-center md:!transform-none md:p-3"
+        style={{ y }}
+      >
+        <h2 className="capitalize text-4xl font-bold text-white md:text-2xl">
           {item.name}
         </h2>
         <p className="mb-3 text-purple-500">{item.tagLine}</p>
-        <div className=" flex gap-4 mb-5">{...item.technology}</div>
+        <div className=" flex gap-4 mb-5 md:justify-center sm:hidden">
+          {...item.technology}
+        </div>
         <p className="text-sm">{item.description}</p>
-        <div className="flex gap-5 mt-4">
+        <div className="flex gap-5 mt-4 md:justify-center">
           <motion.a
             whileHover={btnHover}
             whileTap={btnTap}

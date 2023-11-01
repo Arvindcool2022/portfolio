@@ -27,13 +27,13 @@ function SkillsBar() {
   }, [visible]);
 
   return (
-    <article className="h-screen flex justify-center items-center text-white">
+    <article className="h-full flex justify-center items-center text-white">
       <motion.div
         ref={ref}
         initial="initial"
         animate={control}
         variants={variants}
-        className="relative w-full md:w-4/5 bg-white bg-opacity-5 mx-auto py-2 px-5 rounded-md"
+        className="relative md:w-[95%] w-4/5  bg-white bg-opacity-5 mx-auto py-2 px-5 rounded-md"
       >
         <h1 className="text-center font-medium text-xl mt-4 mb-7 uppercase">
           Skills

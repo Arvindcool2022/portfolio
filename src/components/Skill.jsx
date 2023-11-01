@@ -26,7 +26,7 @@ function Skill({ name, percentage, primaryAnimation }) {
   return (
     <motion.div variants={primaryAnimation} className="w-full my-6">
       <span className="block font-semibold">{name}</span>
-      <div className="h-2 w-full rounded-md mt-2 bg-[#0c0c1d]">
+      <div className="h-2 w-full rounded-md mt-2 md:mt-0 bg-[#0c0c1d]">
         <motion.span
           ref={ref}
           initial="initial"

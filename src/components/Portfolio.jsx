@@ -14,14 +14,13 @@ const Portfolio = () => {
 
   return (
     <div className="portfolio relative" ref={ref}>
-      <div className="progress sticky top-0 left-0 pt-12 font-bold text-center capitalize text-5xl">
-        <h1 className="mb-4">featured works</h1>
+      <div className="progress sticky top-0 left-0 pt-12 font-bold text-center capitalize text-5xl md:text-2xl md:pt-[calc(100vh-60px)] sm:pt-[calc(100vh-10px)]">
+        <h1 className="mb-4  sm:hidden">featured works</h1>
         <motion.div
           style={{ scaleX }}
           className="h-1 rounded-sm bg-white"
         ></motion.div>
       </div>
-
       {projects.map(item => (
         <Project item={item} key={item.id} />
       ))}

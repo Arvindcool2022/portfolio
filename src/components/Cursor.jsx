@@ -18,7 +18,7 @@ const Cursor = () => {
 
   return (
     <motion.div
-      className="w-12 h-12 rounded-full border border-white fixed z-[99]"
+      className="w-12 h-12 rounded-full border border-white fixed z-[99] md:hidden"
       animate={{ x: position.x, y: position.y }}
       transition={{ type: 'spring', damping: 30, stiffness: 350 }}
     ></motion.div>

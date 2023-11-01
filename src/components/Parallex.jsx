@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import Reveal from './Reveal';
 
 const Parallex = ({ type }) => {
   const ref = useRef();
@@ -23,12 +24,14 @@ const Parallex = ({ type }) => {
           : 'bg-[linear-gradient(180deg,#111132,#505064)]'
       }`}
     >
-      <motion.h1
-        className="font-bold text-8xl text-center xs:text-6xl"
-        style={{ y: textMotion }}
-      >
-        {condition ? 'Skills Spectrum' : 'Project Portfolio'}
-      </motion.h1>
+      <Reveal card={false}>
+        <motion.h1
+          className="font-bold text-8xl text-center xs:text-6xl"
+          style={{ y: textMotion }}
+        >
+          {condition ? 'Skills Spectrum' : 'Project Portfolio'}
+        </motion.h1>
+      </Reveal>
       <motion.div
         className="w-full h-full bg-cover bg-bottom absolute "
         style={{ x: starMotion, backgroundImage: `url('./stars.png')` }}

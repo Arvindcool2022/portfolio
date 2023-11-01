@@ -5,7 +5,8 @@ import {
   SkillsBar,
   Portfolio,
   Contact,
-  Cursor
+  Cursor,
+  About
 } from './components';
 import './assets/index.css';
 
@@ -13,17 +14,20 @@ const App = () => {
   return (
     <main>
       <Cursor />
-      <section id="home">
+      <section id="home" className="bg-secondary">
         <NavBar />
         <Hero />
       </section>
-      <section id="skill">
-        <Parallex type={'skills'} />
+      <section className="bg-secondary">
+        <About />
       </section>
       <section>
+        <Parallex type={'skills'} />
+      </section>
+      <section id="skill">
         <SkillsBar />
       </section>
-      <section id="projects">
+      <section>
         <Parallex type={'projects'} />
       </section>
       <Portfolio />

@@ -4,7 +4,7 @@ import Sidebar from './Sidebar';
 import Socials from './Socials';
 const NavBar = () => {
   return (
-    <div className="h-24">
+    <div className="h-24 bg-primary">
       <header className=" max-w-7xl mx-auto h-full flex sm:justify-end justify-between items-center">
         <Logo />
         <Sidebar />

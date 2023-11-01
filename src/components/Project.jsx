@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { btnHover, btnTap } from './buttonAnimation';
+import Reveal from './Reveal';
 
 const Project = ({ item }) => {
   const ref = useRef();
@@ -9,28 +10,32 @@ const Project = ({ item }) => {
     target: ref
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-300, 300]);
+  const y = useTransform(scrollYProgress, [0, 1], [1000, -1000]);
+  const y2 = useTransform(scrollYProgress, [0, 1], [-1000, 1000]);
 
   return (
-    <section className="flex md:flex-col items-center justify-center max-w-6xl mx-auto gap-4">
-      <div className="flex-1 overflow-hidden md:max-h-72 md:w-full md:mt-4">
-        <img
-          ref={ref}
-          className="w-full h-full md:object-contain"
-          src={item.img}
-        />
-      </div>
+    <section className="flex md:flex-col items-center justify-center max-w-6xl mx-auto gap-4 overflow-hidden">
+      <motion.div
+        ref={ref}
+        className="flex-1 overflow-hidden md:max-h-72 md:w-full md:mt-4 md:!transform-none"
+        style={{ y: y2 }}
+      >
+        <img className="w-full h-full md:object-contain" src={item.img} />
+      </motion.div>
       <motion.div
         className="flex-1 md:text-center md:!transform-none md:p-3"
         style={{ y }}
       >
+        {' '}
         <h2 className="capitalize text-4xl font-bold text-white md:text-2xl">
           {item.name}
         </h2>
         <p className="mb-3 text-purple-500">{item.tagLine}</p>
-        <div className=" flex gap-4 mb-5 md:justify-center sm:hidden">
-          {...item.technology}
-        </div>
+        <Reveal width="100%" card={false}>
+          <div className=" flex items-center gap-4 mb-5 md:justify-center sm:hidden">
+            {...item.technology}
+          </div>
+        </Reveal>
         <p className="text-sm">{item.description}</p>
         <div className="flex gap-5 mt-4 md:justify-center">
           <motion.a

@@ -1,4 +1,11 @@
-import { NavBar, Hero, Parallex, SkillsBar, Portfolio } from './components';
+import {
+  NavBar,
+  Hero,
+  Parallex,
+  SkillsBar,
+  Portfolio,
+  Contact
+} from './components';
 import './assets/index.css';
 
 const App = () => {
@@ -19,7 +26,9 @@ const App = () => {
       </section>
       <Portfolio />
 
-      <section id="contact-us">contact us</section>
+      <section id="contact-us">
+        <Contact />
+      </section>
     </main>
   );
 };

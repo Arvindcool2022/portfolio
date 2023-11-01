@@ -43,7 +43,7 @@ function SkillsBar() {
         <Skill name="CSS" percentage="80" primaryAnimation={variants} />
         <Skill name="JavaScript" percentage="80" primaryAnimation={variants} />
         <Skill name="React" percentage="75" primaryAnimation={variants} />
-        <Skill name="SASS" percentage="75" primaryAnimation={variants} />
+        <Skill name="SASS" percentage="85" primaryAnimation={variants} />
         <Skill name="git/Github" percentage="60" primaryAnimation={variants} />
         <Skill name="Bootstrap" percentage="75" primaryAnimation={variants} />
         <Skill name="Tailwind" percentage="75" primaryAnimation={variants} />

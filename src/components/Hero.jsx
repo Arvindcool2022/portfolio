@@ -12,6 +12,7 @@ const textVariant = {
     opacity: 1,
     transition: {
       duration: 1,
+      ease: 'easeOut',
       staggerChildren: 0.15
     }
   },

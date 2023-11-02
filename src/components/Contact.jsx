@@ -96,7 +96,7 @@ const Contact = () => {
           <motion.div
             className="w-full h-full absolute bg-primary -z-10 stroke-purple-700"
             initial={{ opacity: 1 }}
-            whileInView={{ opacity: 0 }}
+            animate={isInView && { opacity: 0 }}
             transition={{ delay: 3, duration: 1 }}
           >
             <svg viewBox="0 0 32.666 32.666">
@@ -127,7 +127,7 @@ const Contact = () => {
             className="flex flex-col gap-6 sm:gap-2"
             onSubmit={sendEmail}
             initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1, zIndex: 2 }}
+            animate={isInView && { opacity: 1, zIndex: 2 }}
             transition={{ delay: 4, duration: 1 }}
           >
             <input

@@ -1,10 +1,10 @@
-import bite from '../assets/bite.jpeg';
-import youtube from '../assets/youtube.jpeg';
-import haircare from '../assets/haircare.jpeg';
-import misc from '../assets/misc.jpeg';
-import portfolio from '../assets/portfolio.jpeg';
-import moshify from '../assets/mosify.jpeg';
-import athletaro from '../assets/athletaro.jpeg';
+import bite from '../assets/bite.webp';
+import youtube from '../assets/youtube.webp';
+import haircare from '../assets/haircare.webp';
+import misc from '../assets/misc.webp';
+import portfolio from '../assets/portfolio.webp';
+import moshify from '../assets/mosify.webp';
+import athletaro from '../assets/athletaro.webp';
 
 import {
   IconApi,

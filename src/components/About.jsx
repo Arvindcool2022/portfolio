@@ -6,7 +6,7 @@ import {
   useTransform
 } from 'framer-motion';
 import { useEffect, useRef } from 'react';
-import IMG from '../assets/dev.png';
+import IMG from '../assets/dev.webp';
 import Reveal from './Reveal';
 const About = () => {
   const ref = useRef();

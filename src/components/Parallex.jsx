@@ -1,6 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import Reveal from './Reveal';
 
 const Parallex = ({ type }) => {
   const ref = useRef();
@@ -32,17 +31,17 @@ const Parallex = ({ type }) => {
       </motion.h1>
       <motion.div
         className="w-full h-full bg-cover bg-bottom absolute "
-        style={{ x: starMotion, backgroundImage: `url('./stars.png')` }}
+        style={{ x: starMotion, backgroundImage: `url('./stars.webp')` }}
       ></motion.div>
       <motion.div
         style={{
           x: sunMotion,
-          backgroundImage: `url(${condition ? './planets.png' : './sun.png'})`
+          backgroundImage: `url(${condition ? './planets.webp' : './sun.webp'})`
         }}
         className="w-full h-full bg-cover bg-bottom absolute"
       ></motion.div>
       <motion.div
-        style={{ backgroundImage: `url('./mountains.png')` }}
+        style={{ backgroundImage: `url('./mountains.webp')` }}
         className="w-full h-full bg-cover bg-bottom absolute"
       ></motion.div>
     </div>

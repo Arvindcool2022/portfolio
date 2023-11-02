@@ -81,7 +81,7 @@ const Hero = () => {
           <motion.img
             variants={textVariant}
             animate="scrollAnimate"
-            src="/scroll.png"
+            src="/scroll.webp"
             alt="scroll icon"
             className="w-12"
           />
@@ -92,12 +92,12 @@ const Hero = () => {
           animate="animate"
           className="absolute -bottom-28 whitespace-nowrap text-[50vh] opacity-5 will-change-transform"
         >
-          React Developer JavaScript Enthusiast
-          {/* Front-End Aficionado CSS Fanatic
+          React Developer JavaScript Aficionado
+          {/* Front-End Enthusiast CSS Fanatic
         UI Designer */}
         </motion.p>
         <div className="h-full absolute right-0 top-0 lg:hidden">
-          <img src="/dev2.png" className="h-full" alt="hero img" />
+          <img src="/dev2.webp" className="h-full" alt="hero img" />
         </div>
       </div>
     </div>

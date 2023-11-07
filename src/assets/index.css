@@ -1,17 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @layer base {
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-button {
+    @apply hidden;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-blue-950 rounded-lg hover:bg-[lightgray];
+  }
   html {
     @apply scroll-smooth bg-primary text-primary select-none;
     scroll-snap-type: y mandatory;
   }
-
   section {
     @apply h-screen snap-center;
   }
-
   @media screen and (max-width: 639px) {
     html {
       scroll-snap-type: y proximity;

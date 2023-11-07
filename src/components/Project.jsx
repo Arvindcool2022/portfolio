@@ -1,7 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import { btnHover, btnTap } from './buttonAnimation';
-import Reveal from './Reveal';
 
 const Project = ({ item }) => {
   const ref = useRef();
@@ -12,6 +11,10 @@ const Project = ({ item }) => {
 
   const y = useTransform(scrollYProgress, [0, 1], [1000, -1000]);
   const y2 = useTransform(scrollYProgress, [0, 1], [-1000, 1000]);
+
+  useEffect(() => {
+    console.log(y.get(), y2.get());
+  }, [y.get(), y2.get()]);
 
   return (
     <section className="flex md:flex-col items-center justify-center max-w-6xl mx-auto gap-4 overflow-hidden">
@@ -31,11 +34,9 @@ const Project = ({ item }) => {
           {item.name}
         </h2>
         <p className="mb-3 text-purple-500">{item.tagLine}</p>
-        <Reveal width="100%" card={false}>
-          <div className=" flex items-center gap-4 mb-5 md:justify-center sm:hidden">
-            {...item.technology}
-          </div>
-        </Reveal>
+        <div className=" flex items-center gap-4 mb-5 md:justify-center sm:hidden">
+          {...item.technology}
+        </div>
         <p className="text-sm">{item.description}</p>
         <div className="flex gap-5 mt-4 md:justify-center">
           <motion.a

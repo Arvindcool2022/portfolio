@@ -4,7 +4,7 @@ import { btnHover, btnTap } from './buttonAnimation';
 const textVariant = {
   initial: {
     x: -500,
-    opacity: 0
+    opacity: 0.5
   },
 
   animate: {
@@ -51,7 +51,7 @@ const Hero = () => {
         >
           <motion.h1
             variants={textVariant}
-            className="text-3xl text-purple-700 tracking-[10px] md:tracking-widest font-bold uppercase"
+            className="text-3xl ps-1 text-purple-700 tracking-[10px] md:tracking-widest font-bold uppercase"
           >
             Arvind A
           </motion.h1>

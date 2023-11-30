@@ -23,7 +23,7 @@
   }
   @media screen and (max-width: 639px) {
     html {
-      scroll-snap-type: y proximity;
+      /* scroll-snap-type: y proximity; */
     }
   }
 }

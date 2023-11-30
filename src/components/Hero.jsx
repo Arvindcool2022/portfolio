@@ -98,7 +98,11 @@ const Hero = () => {
         UI Designer */}
         </motion.p>
         <div className="h-full absolute right-0 top-0 lg:hidden">
-          <img src="/dev2.webp" className="h-full" alt="hero img" />
+          <img
+            src="/dev2.webp"
+            className="h-full object-cover"
+            alt="hero img"
+          />
         </div>
       </div>
     </div>

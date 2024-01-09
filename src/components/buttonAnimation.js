@@ -1,5 +1,6 @@
 const btnHover = {
   scale: 1.03,
+  '&::before': { color: 'black', height: '180%' },
   transition: { type: 'spring', stiffness: 250, damping: 30 }
 };
 

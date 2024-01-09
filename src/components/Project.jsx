@@ -17,34 +17,34 @@ const Project = ({ item }) => {
   }, [y.get(), y2.get()]);
 
   return (
-    <section className="flex md:flex-col items-center justify-center max-w-6xl mx-auto gap-4 overflow-hidden">
+    <section className="mx-auto flex max-w-6xl items-center justify-center gap-4 overflow-hidden md:flex-col">
       <motion.div
         ref={ref}
-        className="flex-1 overflow-hidden md:max-h-72 md:w-full md:mt-4 md:!transform-none"
+        className="flex-1 overflow-hidden md:mt-4 md:max-h-72 md:w-full md:!transform-none"
         style={{ y: y2 }}
       >
-        <img className="w-full h-full md:object-contain" src={item.img} />
+        <img className="h-full w-full md:object-contain" src={item.img} />
       </motion.div>
       <motion.div
-        className="flex-1 md:text-center md:!transform-none md:p-3"
+        className="flex-1 md:!transform-none md:p-3 md:text-center"
         style={{ y }}
       >
         {' '}
-        <h2 className="capitalize text-4xl font-bold text-white md:text-2xl">
+        <h2 className="text-4xl font-bold capitalize text-white md:text-2xl">
           {item.name}
         </h2>
         <p className="mb-3 text-purple-500">{item.tagLine}</p>
-        <div className=" flex items-center gap-4 mb-5 md:justify-center sm:hidden">
+        <div className=" mb-5 flex items-center gap-4 md:justify-center sm:hidden">
           {...item.technology}
         </div>
         <p className="text-sm">{item.description}</p>
-        <div className="flex gap-5 mt-4 md:justify-center">
+        <div className="mt-4 flex gap-5 md:justify-center">
           <motion.a
             href={item.code}
             target="_blank"
             whileHover={btnHover}
             whileTap={btnTap}
-            className="relative p-2 text-xs border border-white rounded-lg cursor-pointer capitalize z-10 overflow-hidden transition-colors duration-700 ease-in-out hover:text-secondary before:content-[''] before:absolute before:w-full before:h-0 before:z-[-1] before:rounded-[0_0_50%_50%] before:top-0 before:transition-all before:duration-1000 before:left-0 before:bg-white hover:before:h-[180%]"
+            className="relative z-10 cursor-pointer overflow-hidden rounded-lg border border-white p-2 text-xs capitalize transition-colors duration-700 ease-in-out before:absolute before:left-0 before:top-0 before:z-[-1] before:h-0 before:w-full before:rounded-[0_0_50%_50%] before:bg-white before:transition-all before:duration-1000 before:content-[''] hover:text-secondary hover:before:h-[180%]"
           >
             source code
           </motion.a>
@@ -53,7 +53,7 @@ const Project = ({ item }) => {
             target="_blank"
             whileHover={btnHover}
             whileTap={btnTap}
-            className="relative p-2 text-xs border border-white rounded-lg cursor-pointer capitalize z-10 overflow-hidden transition-colors duration-700 ease-in-out hover:text-secondary before:content-[''] before:absolute before:w-full before:h-0 before:z-[-1] before:rounded-[50%_50%_0_0] before:bottom-0 before:transition-all before:duration-1000 before:left-0 before:bg-white hover:before:h-[180%]"
+            className="relative z-10 cursor-pointer overflow-hidden rounded-lg border border-white p-2 text-xs capitalize transition-colors duration-700 ease-in-out before:absolute before:bottom-0 before:left-0 before:z-[-1] before:h-0 before:w-full before:rounded-[50%_50%_0_0] before:bg-white before:transition-all before:duration-1000 before:content-[''] hover:text-secondary hover:before:h-[180%]"
           >
             live demo
           </motion.a>

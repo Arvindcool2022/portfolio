@@ -17,20 +17,20 @@ const Parallex = ({ type }) => {
   return (
     <div
       ref={ref}
-      className={`h-full w-full relative flex items-center justify-center overflow-hidden ${
+      className={`relative flex h-full w-full items-center justify-center overflow-hidden ${
         condition
           ? 'bg-[linear-gradient(180deg,#111132,#0c0c1d)]'
           : 'bg-[linear-gradient(180deg,#111132,#505064)]'
       }`}
     >
       <motion.h1
-        className="font-bold text-8xl text-center xs:text-6xl"
+        className="text-center text-8xl font-bold xs:text-6xl"
         style={{ y: textMotion }}
       >
         {condition ? 'Skills Spectrum' : 'Project Portfolio'}
       </motion.h1>
       <motion.div
-        className="w-full h-full bg-cover bg-bottom absolute "
+        className="absolute h-full w-full bg-cover bg-bottom "
         style={{ x: starMotion, backgroundImage: `url('./stars.webp')` }}
       ></motion.div>
       <motion.div
@@ -38,11 +38,11 @@ const Parallex = ({ type }) => {
           x: sunMotion,
           backgroundImage: `url(${condition ? './planets.webp' : './sun.webp'})`
         }}
-        className="w-full h-full bg-cover bg-bottom absolute"
+        className="absolute h-full w-full bg-cover bg-bottom"
       ></motion.div>
       <motion.div
         style={{ backgroundImage: `url('./mountains.webp')` }}
-        className="w-full h-full bg-cover bg-bottom absolute"
+        className="absolute h-full w-full bg-cover bg-bottom"
       ></motion.div>
     </div>
   );

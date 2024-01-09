@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const ToggleButton = ({ setOpen }) => {
   return (
     <button
-      onClick={() => setOpen(p => !p)}
-      className="w-12 h-12 rounded-full fixed top-6 left-[38px] z-50 outline-none border-none"
+      onClick={() => setOpen((p) => !p)}
+      className="fixed left-[38px] top-6 z-50 h-12 w-12 rounded-full border-none outline-none"
     >
       <svg width="23" height="23" viewBox="0 0 23 23">
         <motion.path
@@ -12,8 +12,8 @@ const ToggleButton = ({ setOpen }) => {
           stroke="black"
           strokeLinecap="round"
           variants={{
-            closed: { d: 'M 2 2.5 L 20 2.5' },
-            open: { d: 'M 3 16.5 L 17 2.5' }
+            closed: { d: "M 2 2.5 L 20 2.5" },
+            open: { d: "M 3 16.5 L 17 2.5" },
           }}
         />
         <motion.path
@@ -23,7 +23,7 @@ const ToggleButton = ({ setOpen }) => {
           d="M 2 9.423 L 20 9.423"
           variants={{
             closed: { opacity: 1 },
-            open: { opacity: 0 }
+            open: { opacity: 0 },
           }}
         />
         <motion.path
@@ -31,8 +31,8 @@ const ToggleButton = ({ setOpen }) => {
           stroke="black"
           strokeLinecap="round"
           variants={{
-            closed: { d: 'M 2 16.346 L 20 16.346' },
-            open: { d: 'M 3 2.5 L 17 16.346' }
+            closed: { d: "M 2 16.346 L 20 16.346" },
+            open: { d: "M 3 2.5 L 17 16.346" },
           }}
         />
       </svg>

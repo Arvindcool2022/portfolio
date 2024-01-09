@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
-import { useInView, useAnimation, motion, easeOut } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import { useInView, useAnimation, motion } from 'framer-motion';
 
 const Reveal = ({
   children,
@@ -10,13 +10,13 @@ const Reveal = ({
   const ref = useRef();
   const isInView = useInView(ref, { once: true });
 
-  const mainControl = useAnimation();
-  const control = useAnimation();
+  const textControl = useAnimation();
+  const barControl = useAnimation();
 
   useEffect(() => {
     if (isInView) {
-      mainControl.start('visible');
-      control.start('visible');
+      textControl.start('visible');
+      barControl.start('visible');
     }
   }, [isInView]);
   return (
@@ -33,7 +33,7 @@ const Reveal = ({
           }
         }}
         initial="hidden"
-        animate={mainControl}
+        animate={textControl}
       >
         {children}
       </motion.div>
@@ -47,7 +47,7 @@ const Reveal = ({
             }
           }}
           initial="hidden"
-          animate={control}
+          animate={barControl}
           style={{
             position: 'absolute',
             top: 4,
@@ -69,7 +69,7 @@ const Reveal = ({
             }
           }}
           initial="hidden"
-          animate={control}
+          animate={barControl}
           style={{
             position: 'absolute',
             top: 4,

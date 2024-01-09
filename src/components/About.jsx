@@ -8,6 +8,11 @@ import {
 import { useEffect, useRef } from 'react';
 import IMG from '../assets/dev.webp';
 import Reveal from './Reveal';
+
+// function useParallax(value, distance) {
+//   return useTransform(value, [0, 1], [-distance, distance]);
+// }
+
 const About = () => {
   const ref = useRef();
   const isInView = useInView(ref, { once: true });
@@ -24,21 +29,22 @@ const About = () => {
 
   const y = useTransform(scrollYProgress, [0, 1], [700, -700]);
   const y2 = useTransform(scrollYProgress, [0, 1], [-500, 500]);
+
   return (
     <div
-      className="max-w-5xl mx-auto h-full flex items-center justify-center overflow-hidden relative"
+      className="relative mx-auto flex h-full max-w-5xl items-center justify-center overflow-hidden"
       id="about"
     >
       <motion.div
-        className=" bg-white  bg-opacity-5  rounded-2xl h-96 w-full  sm:h-1/2 absolute sm:!transform-none sm:hidden"
+        className=" absolute h-96 w-full rounded-2xl bg-white  bg-opacity-5 sm:hidden sm:h-1/2 sm:!transform-none"
         style={{ y }}
       ></motion.div>
 
       <motion.div
         style={{ y: y2 }}
-        className=" p-4 rounded-2xl gap-4 max-h-96 w-full flex sm:flex-col-reverse sm:gap-2 sm:max-h-full sm:!transform-none"
+        className=" flex max-h-96 w-full gap-4 rounded-2xl p-4 sm:max-h-full sm:!transform-none sm:flex-col-reverse sm:gap-2"
       >
-        <div ref={ref} className="flex-1 sm:h-1/2 overflow-hidden">
+        <div ref={ref} className="flex-1 overflow-hidden sm:h-1/2">
           <motion.img
             variants={{
               initial: { y: -750 },
@@ -53,7 +59,7 @@ const About = () => {
         <div className="flex-1 self-center sm:h-full ">
           <div className="flex justify-center">
             <Reveal>
-              <h1 className="text-2xl font-bold text-center mb-4">About Me</h1>
+              <h1 className="mb-4 text-center text-2xl font-bold">About Me</h1>
             </Reveal>
           </div>
           <div className="sm:text-center">

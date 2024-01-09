@@ -64,28 +64,28 @@ const Contact = () => {
       >
         <motion.div
           variants={variants}
-          className="h-[95%] md:h-[90%] mx-auto max-w-6xl flex items-center justify-center gap-10 xl:mx-4 sm:flex-col sm:gap-0"
+          className="mx-auto flex h-[95%] max-w-6xl items-center justify-center gap-10 xl:mx-4 md:h-[90%] sm:flex-col sm:gap-0"
         >
           <motion.div className="flex-1 md:mt-8" variants={variants}>
             <motion.h1
-              className="font-bold text-7xl sm:text-3xl"
+              className="text-7xl font-bold sm:text-3xl"
               variants={variants}
             >
               Let's work together
             </motion.h1>
             <motion.ul variants={variants} className="ps-4">
               <li>
-                <h2 className="font-semibold text-xl mb-1 mt-4">E-mail</h2>
+                <h2 className="mb-1 mt-4 text-xl font-semibold">E-mail</h2>
               </li>
               <motion.li variants={variants}>
                 arvindcool2022@gmail.com
               </motion.li>
               <li>
-                <h2 className="font-semibold text-xl mb-1 mt-4">Linked-in</h2>
+                <h2 className="mb-1 mt-4 text-xl font-semibold">Linked-in</h2>
               </li>
               <motion.li variants={variants}>
                 <a
-                  className="relative font-medium overflow-hidden rounded p-1 text-amber-500 transition-all duration-500 ease-in-out hover:text-secondary before:content-[''] before:absolute before:-z-10 before:left-0 before:top-0 before:bg-white before:h-full before:transition-all before:duration-500 before:ease-in-out before:w-full before:scale-x-0 before:origin-left hover:before:scale-x-100"
+                  className="relative overflow-hidden rounded p-1 font-medium text-amber-500 transition-all duration-500 ease-in-out before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-left before:scale-x-0 before:bg-white before:transition-all before:duration-500 before:ease-in-out before:content-[''] hover:text-secondary hover:before:scale-x-100"
                   href="https://www.linkedin.com/in/arvind-a-262260227/"
                   target="_blank"
                 >
@@ -93,14 +93,14 @@ const Contact = () => {
                 </a>
               </motion.li>
               <li>
-                <h2 className="font-semibold text-xl mb-1 mt-4">Address</h2>
+                <h2 className="mb-1 mt-4 text-xl font-semibold">Address</h2>
               </li>
               <motion.li variants={variants}>chennai.</motion.li>
             </motion.ul>
           </motion.div>
-          <div className="flex-1 relative md:w-full">
+          <div className="relative flex-1 md:w-full">
             <motion.div
-              className="w-full h-full absolute bg-primary -z-10 stroke-purple-700"
+              className="absolute -z-10 h-full w-full bg-primary stroke-purple-700"
               initial={{ opacity: 1 }}
               animate={isInView && { opacity: 0 }}
               transition={{ delay: 2, duration: 1 }}
@@ -137,21 +137,21 @@ const Contact = () => {
               transition={{ delay: 3, duration: 1 }}
             >
               <input
-                className="p-3 bg-primary border border-white rounded placeholder:font-medium"
+                className="rounded border border-white bg-primary p-3 placeholder:font-medium"
                 type="text"
                 placeholder="Name..."
                 name="name"
                 required
               />
               <input
-                className="p-3 bg-primary border border-white rounded placeholder:font-medium"
+                className="rounded border border-white bg-primary p-3 placeholder:font-medium"
                 type="Email"
                 placeholder="Email"
                 name="email"
                 required
               />
               <textarea
-                className="p-3 bg-primary border border-white rounded placeholder:font-medium"
+                className="rounded border border-white bg-primary p-3 placeholder:font-medium"
                 rows="8"
                 name="message"
                 placeholder="Message..."
@@ -160,13 +160,13 @@ const Contact = () => {
               <motion.button
                 whileHover={btnHover}
                 whileTap={btnTap}
-                className="text-lg font-medium w-1/3 sm:w-1/2 self-center relative p-4 sm:p-2 border border-white rounded-xl cursor-pointer overflow-hidden transition-colors duration-700 ease-in-out hover:text-secondary before:content-[''] before:absolute before:w-full before:h-0 before:z-[-1] before:rounded-[0_0_50%_50%] before:-top-1 before:transition-all before:duration-1000 before:left-0 before:bg-white hover:before:h-[180%]"
+                className="relative w-1/3 cursor-pointer self-center overflow-hidden rounded-xl border border-white p-4 text-lg font-medium transition-colors duration-700 ease-in-out before:absolute before:-top-1 before:left-0 before:z-[-1] before:h-0 before:w-full before:rounded-[0_0_50%_50%] before:bg-white before:transition-all before:duration-1000 before:content-[''] hover:text-secondary hover:before:h-[180%] sm:w-1/2 sm:p-2"
               >
                 Submit
               </motion.button>
               <p
                 className={
-                  'text-sm text-center ' +
+                  'text-center text-sm ' +
                   (err ? 'text-red-600' : 'text-green-800')
                 }
               >
@@ -178,18 +178,18 @@ const Contact = () => {
         </motion.div>
         <motion.p
           variants={variants}
-          className="text-sm text-center capitalize text-slate-500 flex gap-1 md:block justify-center items-end"
+          className="flex items-end justify-center gap-1 text-center text-sm capitalize text-slate-500 md:block"
         >
           © 2023 Arvind. made with ❤️. All Rights NOT Reserved. Feel Free To
           Copy😜. Source code in{' '}
           <a
-            className="underline underline-offset-2 relative font-medium overflow-hidden text-amber-500 transition-all duration-500 ease-in-out hover:text-secondary before:content-[''] before:absolute before:-z-10 before:left-0 before:top-0 before:bg-white before:h-full before:transition-all before:duration-500 before:ease-in-out before:w-full before:scale-x-0 before:origin-left hover:before:scale-x-100"
+            className="relative overflow-hidden font-medium text-amber-500 underline underline-offset-2 transition-all duration-500 ease-in-out before:absolute before:left-0 before:top-0 before:-z-10 before:h-full before:w-full before:origin-left before:scale-x-0 before:bg-white before:transition-all before:duration-500 before:ease-in-out before:content-[''] hover:text-secondary hover:before:scale-x-100"
             href="https://github.com/Arvindcool2022/portfolio"
             target="_blank"
           >
             GitHub.
           </a>
-          <span className="flex items-center md:justify-center gap-1">
+          <span className="flex items-center gap-1 md:justify-center">
             created using
             <IconReact />
             <IconTailwindcss />

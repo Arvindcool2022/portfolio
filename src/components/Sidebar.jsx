@@ -25,11 +25,12 @@ const Sidebar = () => {
 
   return (
     <motion.div
-      className="bg-white text-black flex flex-col items-center justify-center"
+      className="flex flex-col items-center justify-center bg-white text-black"
+      initial={false}
       animate={open ? 'open' : 'closed'}
     >
       <motion.div
-        className="fixed top-0 left-0 bottom-0 xs:w-full w-96 z-40 bg-white"
+        className="fixed bottom-0 left-0 top-0 z-40 w-96 bg-white xs:w-full"
         variants={variants}
       >
         <List setOpen={setOpen} />

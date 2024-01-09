@@ -5,11 +5,11 @@ import Socials from './Socials';
 const NavBar = () => {
   return (
     <div className="h-24 bg-primary">
-      <header className=" max-w-7xl mx-auto h-full flex sm:justify-end justify-between items-center">
+      <header className=" mx-auto flex h-full max-w-7xl items-center justify-between sm:justify-end">
         <Logo />
         <Sidebar />
         <motion.div
-          className="items-center gap-4 sm:hidden 2xl:me-3 me-0 flex"
+          className="me-0 flex items-center gap-4 2xl:me-3 sm:hidden"
           initial={{ opacity: 0, scale: 0.75 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}

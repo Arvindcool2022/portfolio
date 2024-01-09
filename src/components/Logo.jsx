@@ -2,7 +2,7 @@ import TypeIt from 'typeit-react';
 
 const Logo = () => {
   return (
-    <span className="p-2 text-xl font-semibold uppercase tracking-wider 2xl:ms-20 ms-0">
+    <span className="ms-0 p-2 text-xl font-semibold uppercase tracking-wider 2xl:ms-20">
       <TypeIt
         getBeforeInit={instance => {
           instance

@@ -12,9 +12,9 @@ const Project = ({ item }) => {
   const y = useTransform(scrollYProgress, [0, 1], [1000, -1000]);
   const y2 = useTransform(scrollYProgress, [0, 1], [-1000, 1000]);
 
-  useEffect(() => {
-    console.log(y.get(), y2.get());
-  }, [y.get(), y2.get()]);
+  // useEffect(() => {
+  //   console.log(y.get(), y2.get());
+  // }, [y.get(), y2.get()]);
 
   return (
     <section className="mx-auto flex max-w-6xl items-center justify-center gap-4 overflow-hidden md:flex-col">
